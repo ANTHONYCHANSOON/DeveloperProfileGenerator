@@ -175,16 +175,59 @@ function generateHTML(data) {
       
       <body>
 
-<div id = "profileimage">${data.profileimageurl}</div>
-<div id = "username">${data.username}</div>
-<div id = "location">${data.location}</div>
-<div id = "profilelink">${data.profilelink}</div>
-<div id = "blog">${data.blog}</div>
-<div id = "bio">${data.bio}</div>
-<div id = "publicrepos">${data.publicrepos}</div>
-<div id = "followers">${data.followers}</div>
-<div id = "following">${data.following}</div>
-<div id = "watchers">${data.stars}</div>
+<div class="wrapper">
+    <div class="photo-header">
+    <img id="profileimage" class="photo-header img" src ="${data.profileimageurl}">
+    <h1 class= "photo-header h1">Hi!</h1>
+    <h1 class ="photo-header h1" id = "username">My name is ${data.username}</h1>
+    
+</div>
+<div class = "links-nav">
+<a href= "${data.location}" class = "link-nav">${data.location}</a>
+    <a href = "${data.profilelink}" id = "profilelink" class = "nav-link">Github</a>
+    <a href = "${data.blog}" id = "blog" class = "nav-link">Blog</a>
+</div>
+
+<div class="container">
+<div class="row">
+  <div class="col">
+    <h2 class="" id="bio">${data.bio}</h2>
+  </div>
+</div>
+</div>
+
+<div class = "container">
+<div class = "row">
+<div class = "col">
+<div class = "card">
+<h1>Public Repos</h1>
+<h1>${data.publicrepos}</h1>
+</div>
+</div>
+<div class = "col">
+<div class = "card">
+<h1>Followers</h1>
+<h1>${data.followers}</h1>
+</div>
+</div>
+</div>
+<div class = "row">
+<div class = "col">
+<div class = "card">
+<h1>following</h1>
+<h1>${data.following}</h1>
+</div>
+</div>
+<div class = "col">
+<div class = "card">
+<h1>GitHub Stars</h1>
+<h1>${data.stars}</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 
 <script src = index.js></script>
 <script type="text/javascript" src="generateHTML.js"></script>
